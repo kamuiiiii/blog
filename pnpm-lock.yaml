@@ -6,6 +6,7 @@ overrides:
 specifiers:
   autoprefixer: ^10.4.0
   axios: '>=0.21.1'
+  cross-env: ^7.0.3
   eslint: <8.0.0
   eslint-config-next: ^12.0.3
   eslint-config-prettier: ^8.3.0
@@ -25,6 +26,7 @@ specifiers:
   react: ^17.0.2
   react-cusdis: ^2.0.1
   react-dom: ^17.0.2
+  react-icons: ^4.3.1
   react-notion-x: ^4.11.0
   stylelint: ^14.1.0
   stylelint-config-standard: ^24.0.0
@@ -42,11 +44,13 @@ dependencies:
   react: 17.0.2
   react-cusdis: 2.1.3_react-dom@17.0.2+react@17.0.2
   react-dom: 17.0.2_react@17.0.2
+  react-icons: 4.3.1_react@17.0.2
   react-notion-x: 4.11.2_react-dom@17.0.2+react@17.0.2
   use-ackee: 3.0.0_react@17.0.2
 
 devDependencies:
   autoprefixer: 10.4.0_postcss@8.4.4
+  cross-env: 7.0.3
   eslint: 7.32.0
   eslint-config-next: 12.0.4_eslint@7.32.0+next@12.0.4
   eslint-config-prettier: 8.3.0_eslint@7.32.0
@@ -1125,6 +1129,14 @@ packages:
       safe-buffer: 5.2.1
       sha.js: 2.4.11
     dev: false
+
+  /cross-env/7.0.3:
+    resolution: {integrity: sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==}
+    engines: {node: '>=10.14', npm: '>=6', yarn: '>=1'}
+    hasBin: true
+    dependencies:
+      cross-spawn: 7.0.3
+    dev: true
 
   /cross-spawn/7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
@@ -3775,6 +3787,14 @@ packages:
       hotkeys-js: 3.8.7
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
+    dev: false
+
+  /react-icons/4.3.1_react@17.0.2:
+    resolution: {integrity: sha512-cB10MXLTs3gVuXimblAdI71jrJx8njrJZmNMEMC+sQu5B/BIOmlsAjskdqpn81y8UBVEGuHODd7/ci5DvoSzTQ==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 17.0.2
     dev: false
 
   /react-image/4.0.3_react-dom@17.0.2+react@17.0.2:

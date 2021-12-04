@@ -12,7 +12,7 @@
     "url": "http://craigary.net"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "cross-env NOTION_PAGE_ID=3f29afa5639943c1ab1b4f37e3dc7917 next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -29,11 +29,13 @@
     "react": "^17.0.2",
     "react-cusdis": "^2.0.1",
     "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
     "react-notion-x": "^4.11.0",
     "use-ackee": "^3.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.0",
+    "cross-env": "^7.0.3",
     "eslint": "<8.0.0",
     "eslint-config-next": "^12.0.3",
     "eslint-config-prettier": "^8.3.0",

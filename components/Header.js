@@ -1,7 +1,8 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import BLOG from '@/blog.config'
 import { useLocale } from '@/lib/locale'
+import { IoSunnyOutline, IoMoonSharp } from 'react-icons/io5'
 
 const NavBar = () => {
   const locale = useLocale()
@@ -11,6 +12,13 @@ const NavBar = () => {
     { id: 2, name: locale.NAV.SEARCH, to: '/search', show: true },
     { id: 3, name: locale.NAV.RSS, to: '/feed', show: false },
   ]
+  const [isDark, setIsDark] = useState(document.documentElement.classList.contains('dark'));
+  const toggle = () => {
+    document.documentElement.classList.toggle('dark')
+    setIsDark(!isDark)
+  }
+
+  const Icon = isDark ? IoMoonSharp : IoSunnyOutline
   return (
     <div className="flex-shrink-0">
       <ul className="flex flex-row">
@@ -27,6 +35,13 @@ const NavBar = () => {
               </li>
             )
         )}
+        <li className="block ml-4 text-black dark:text-gray-50 nav">
+          {
+            isDark
+              ? (<IoMoonSharp onClick={toggle} className="w-5 h-5 cursor-pointer" />)
+              : (<IoSunnyOutline onClick={toggle} className="w-6 h-6 -mt-0.5 cursor-pointer" />)
+          }
+        </li>
       </ul>
     </div>
   )
@@ -65,10 +80,10 @@ const Header = ({ navBarTitle, fullWidth }) => {
         id="sticky-nav"
         ref={navRef}
       >
-        <div className="flex items-center">
+        <div className="flex items-center text-black dark:text-gray-50">
           <Link href="/">
             <a aria-label={BLOG.title}>
-              🐳 Kamui Blog
+              🐳 {BLOG.title}
             </a>
           </Link>
           {navBarTitle
