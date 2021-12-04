@@ -10,8 +10,13 @@
 .notion-h-title {
   @apply leading-8;
   @apply p-0;
-  @apply my-3;
+  @apply my-1.5;
 }
+
+.notion-list li {
+  @apply p-0;
+}
+
 .notion-page-link {
   color: inherit;
 }
