@@ -12,7 +12,7 @@ const NavBar = () => {
     { id: 2, name: locale.NAV.SEARCH, to: '/search', show: true },
     { id: 3, name: locale.NAV.RSS, to: '/feed', show: false },
   ]
-  const [isDark, setIsDark] = useState(document.documentElement.classList.contains('dark'));
+  const [isDark, setIsDark] = useState(BLOG.appearance === 'dark');
   const toggle = () => {
     document.documentElement.classList.toggle('dark')
     setIsDark(!isDark)
