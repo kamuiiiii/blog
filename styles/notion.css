@@ -14,7 +14,14 @@
 }
 
 .notion-h {
-  margin-top: 0;
+  @apply mt-0;
+}
+
+.notion-h2 {
+  @apply text-2xl;
+  @apply border-b border-gray-200 dark:border-gray-700;
+  @apply w-full;
+  @apply mb-3;
 }
 
 .notion-list li {
