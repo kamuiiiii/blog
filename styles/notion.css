@@ -43,7 +43,7 @@ svg + .notion-page-title-text {
   @apply text-gray-900;
 }
 
-pre[class*='language-'] {
+pre[class*="language-"] {
   line-height: inherit;
 }
 
@@ -66,6 +66,7 @@ pre[class*='language-'] {
 }
 .notion-quote {
   padding: 0.2em 0.9em;
+  font-size: 16px;
 }
 .notion-collection {
   @apply max-w-full;
