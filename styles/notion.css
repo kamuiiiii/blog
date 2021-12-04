@@ -13,6 +13,10 @@
   @apply my-1.5;
 }
 
+.notion-h {
+  margin-top: 0;
+}
+
 .notion-list li {
   @apply p-0;
 }
