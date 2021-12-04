@@ -66,18 +66,16 @@ const Layout = ({
         )}
         {children}
         {blockMap && (
-          <div className="-mt-4">
-            <NotionRenderer
-              recordMap={blockMap}
-              components={{
-                equation: Equation,
-                code: Code,
-                collection: Collection,
-                collectionRow: CollectionRow
-              }}
-              mapPageUrl={mapPageUrl}
-            />
-          </div>
+          <NotionRenderer
+            recordMap={blockMap}
+            components={{
+              equation: Equation,
+              code: Code,
+              collection: Collection,
+              collectionRow: CollectionRow
+            }}
+            mapPageUrl={mapPageUrl}
+          />
         )}
       </article>
       <div className="flex justify-between font-medium text-gray-500 dark:text-gray-400">
