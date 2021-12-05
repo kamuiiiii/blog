@@ -40,6 +40,10 @@
   right: 20px;
 }
 
+.notion-header-anchor {
+  top: -65px;
+}
+
 .notion-page-link {
   color: inherit;
 }
