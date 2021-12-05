@@ -14,6 +14,9 @@ module.exports = {
   darkMode: BLOG.appearance === 'auto' ? 'media' : 'class', // or 'media' or 'class'
   theme: {
     extend: {
+      screens: {
+        toc: { max: '1500px' },
+      },
       colors: {
         day: {
           DEFAULT: BLOG.lightBackground || '#ffffff'

@@ -28,6 +28,18 @@
   @apply p-0;
 }
 
+@screen toc {
+  .notion-table-of-contents {
+    @apply hidden;
+  }
+}
+
+.notion-table-of-contents {
+  @apply fixed w-auto;
+  top: 145px;
+  right: 20px;
+}
+
 .notion-page-link {
   color: inherit;
 }
