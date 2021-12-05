@@ -23,6 +23,10 @@ module.exports = {
         },
         night: {
           DEFAULT: BLOG.darkBackground || '#111827'
+        },
+        hover: {
+          dark: '#ffa7c4',
+          light: '#2ea7c8'
         }
       },
       fontFamily: {

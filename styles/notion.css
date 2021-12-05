@@ -14,7 +14,7 @@
 }
 
 .notion-h {
-  @apply mt-0;
+  @apply mt-0 pl-0;
 }
 
 .notion-h2 {

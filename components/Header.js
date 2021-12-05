@@ -18,7 +18,6 @@ const NavBar = () => {
     setIsDark(!isDark)
   }
 
-  const Icon = isDark ? IoMoonSharp : IoSunnyOutline
   return (
     <div className="flex-shrink-0">
       <ul className="flex flex-row">
@@ -38,8 +37,8 @@ const NavBar = () => {
         <li className="block ml-4 text-black dark:text-gray-50 nav">
           {
             isDark
-              ? (<IoMoonSharp onClick={toggle} className="w-5 h-5 cursor-pointer" />)
-              : (<IoSunnyOutline onClick={toggle} className="w-6 h-6 -mt-0.5 cursor-pointer" />)
+              ? (<IoMoonSharp onClick={toggle} className="w-5 h-5 cursor-pointer hover:text-hover-dark" />)
+              : (<IoSunnyOutline onClick={toggle} className="w-6 h-6 -mt-0.5 cursor-pointer hover:text-hover-light" />)
           }
         </li>
       </ul>
