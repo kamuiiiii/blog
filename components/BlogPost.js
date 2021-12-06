@@ -8,7 +8,7 @@ const BlogPost = ({ post }) => {
       <a>
         <article key={post.id} className="mb-6 md:mb-12">
           <header className="flex flex-col justify-between md:flex-row md:items-baseline">
-            <h2 className="text-lg mb-2 cursor-pointer text-black md:font-medium dark:text-gray-100">
+            <h2 className="text-lg mb-2 cursor-pointer text-black font-medium md:font-normal dark:text-gray-100">
               {post.title}
             </h2>
             <time className="flex-shrink-0 text-gray-600 dark:text-gray-400">
