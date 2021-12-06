@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Container from '@/components/Container'
 import TagItem from '@/components/TagItem'
 import { NotionRenderer, Equation, Code, Collection, CollectionRow } from 'react-notion-x'
@@ -7,6 +6,7 @@ import formatDate from '@/lib/formatDate'
 import { useLocale } from '@/lib/locale'
 import { useRouter } from 'next/router'
 import Comments from '@/components/Comments'
+import Avatar from '@/public/images/avatar.svg'
 
 const mapPageUrl = id => {
   return 'https://www.notion.so/' + id.replace(/-/g, '')
@@ -37,14 +37,8 @@ const Layout = ({
         {frontMatter.type[0] !== 'Page' && (
           <nav className="flex mt-5 mb-8 items-center leading-8 text-gray-500 dark:text-gray-400 border-b border-gray-200 dark:border-gray-700">
             <div className="flex">
-              <a href={BLOG.socialLink || '#'} className="flex">
-                <Image
-                  alt={BLOG.author}
-                  width={24}
-                  height={24}
-                  src="/images/avatar.svg"
-                  className="rounded-full"
-                />
+              <a href={BLOG.socialLink || '#'} className="flex items-center">
+                <Avatar className="w-[22px] h-[22px]" />
                 <p className="ml-2 md:block">{BLOG.author}</p>
               </a>
               <span className="block">&nbsp;/&nbsp;</span>
