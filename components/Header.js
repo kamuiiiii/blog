@@ -26,7 +26,7 @@ const NavBar = () => {
             link.show && (
               <li
                 key={link.id}
-                className="block ml-4 text-black dark:text-gray-50 nav"
+                className="block ml-4 nav text-gray-400 hover:text-black dark:hover:text-gray-50"
               >
                 <Link href={link.to}>
                   <a>{link.name}</a>
@@ -34,7 +34,7 @@ const NavBar = () => {
               </li>
             )
         )}
-        <li className="block ml-4 text-black dark:text-gray-50 nav">
+        <li className="block ml-4 nav text-gray-400">
           {
             isDark
               ? (<IoMoonSharp onClick={toggle} className="w-5 h-5 cursor-pointer hover:text-hover-dark" />)
