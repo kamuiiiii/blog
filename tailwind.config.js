@@ -15,6 +15,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
+        'toc-inline': { min: '0px', max: '1499px' },
         'toc-fixed': { min: '1500px' },
       },
       colors: {

@@ -34,8 +34,10 @@
   }
 }
 
-.notion-table-of-contents {
-  @apply -mt-4 mb-8;
+@screen toc-inline {
+  .notion-table-of-contents {
+    @apply -mt-4 mb-8;
+  }
 }
 
 .notion-header-anchor {
