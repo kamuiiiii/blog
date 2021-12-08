@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import BLOG from '@/blog.config'
 import { useLocale } from '@/lib/locale'
 import { IoSunnyOutline, IoMoonSharp } from 'react-icons/io5'
 
 const NavBar = () => {
   const locale = useLocale()
+  const router = useRouter()
   const links = [
     { id: 0, name: locale.NAV.INDEX, to: BLOG.path || '/', show: true },
     { id: 1, name: locale.NAV.ABOUT, to: '/about', show: BLOG.showAbout },
@@ -29,7 +31,7 @@ const NavBar = () => {
                 className="block ml-4 nav text-gray-400 hover:text-black dark:hover:text-gray-50"
               >
                 <Link href={link.to}>
-                  <a>{link.name}</a>
+                  <a className={router.asPath === link.to ? 'text-black dark:text-gray-50' : ''}>{link.name}</a>
                 </Link>
               </li>
             )
