@@ -28,16 +28,14 @@
   @apply p-0;
 }
 
-@screen toc {
+@screen toc-fixed {
   .notion-table-of-contents {
-    @apply hidden;
+    @apply fixed w-auto top-[145px] right-[20px];
   }
 }
 
 .notion-table-of-contents {
-  @apply fixed w-auto;
-  top: 145px;
-  right: 20px;
+  @apply -mt-4 mb-8;
 }
 
 .notion-header-anchor {

@@ -15,7 +15,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        toc: { max: '1500px' },
+        'toc-fixed': { min: '1500px' },
       },
       colors: {
         day: {
