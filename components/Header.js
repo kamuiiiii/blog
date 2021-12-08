@@ -20,8 +20,6 @@ const NavBar = () => {
     setIsDark(!isDark)
   }
 
-  console.log(router)
-
   return (
     <div className="flex-shrink-0">
       <ul className="flex flex-row">
