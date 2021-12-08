@@ -64,12 +64,12 @@ const Header = ({ navBarTitle, fullWidth }) => {
   useEffect(() => {
     const obvserver = new window.IntersectionObserver(handler)
     obvserver.observe(sentinalRef.current)
-    // Don't touch this, I have no idea how it works XD
-    // return () => {
-    //   if (sentinalRef.current) obvserver.unobserve(sentinalRef.current)
-    // }
-    /* eslint-disable-line */
-  }, [sentinalRef])
+
+    return () => {
+      if (sentinalRef.current) obvserver.unobserve(sentinalRef.current)
+    }
+  }, [sentinalRef.current])
+
   return (
     <>
       <div className="observer-element h-4 md:h-12" ref={sentinalRef}></div>
