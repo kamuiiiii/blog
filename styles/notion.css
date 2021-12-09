@@ -30,7 +30,8 @@
 
 @screen toc-fixed {
   .notion-table-of-contents {
-    @apply fixed w-auto top-[145px] right-[20px];
+    @apply fixed w-auto top-[145px];
+    right: calc((100% - 700px) / 2 - 400px);
   }
 }
 
