@@ -91,10 +91,6 @@ body::-webkit-scrollbar-thumb {
   overflow: hidden;
 }
 
-.sticky-nav-full .nav {
-  @apply text-gray-600 dark:text-gray-300;
-}
-
 nav {
   flex-wrap: wrap;
   line-height: 1.5em;
