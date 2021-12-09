@@ -5,6 +5,7 @@ import BLOG from '@/blog.config'
 import formatDate from '@/lib/formatDate'
 import { useLocale } from '@/lib/locale'
 import { useRouter } from 'next/router'
+import Comments from '@/components/Comments'
 import Avatar from '@/public/images/avatar.svg'
 
 const mapPageUrl = id => {
@@ -89,6 +90,7 @@ const Layout = ({
           </button>
         </a>
       </div>
+      <Comments frontMatter={frontMatter} />
     </Container>
   )
 }
