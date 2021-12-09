@@ -1,8 +1,9 @@
-import { useEffect, useRef, useState } from 'react'
+import { useContext, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import BLOG from '@/blog.config'
 import { useLocale } from '@/lib/locale'
 import { IoSunnyOutline, IoMoonSharp } from 'react-icons/io5'
+import { AppContext } from '@/context/app-context'
 
 const NavBar = () => {
   const locale = useLocale()
@@ -12,10 +13,11 @@ const NavBar = () => {
     { id: 2, name: locale.NAV.SEARCH, to: '/search', show: true },
     { id: 3, name: locale.NAV.RSS, to: '/feed', show: false },
   ]
-  const [isDark, setIsDark] = useState(BLOG.appearance === 'dark');
+  const { context, setContext } = useContext(AppContext)
+
   const toggle = () => {
     document.documentElement.classList.toggle('dark')
-    setIsDark(!isDark)
+    setContext({ isDark: !context.isDark })
   }
 
   return (
@@ -36,7 +38,7 @@ const NavBar = () => {
         )}
         <li className="block ml-4 nav text-gray-400">
           {
-            isDark
+            context.isDark
               ? (<IoMoonSharp onClick={toggle} className="w-5 h-5 cursor-pointer hover:text-hover-dark" />)
               : (<IoSunnyOutline onClick={toggle} className="w-6 h-6 -mt-0.5 cursor-pointer hover:text-hover-light" />)
           }
