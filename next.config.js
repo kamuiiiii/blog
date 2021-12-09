@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
   webpack5: true,
   eslint: {
     dirs: [
@@ -37,3 +37,9 @@ module.exports = {
     return config
   }
 }
+
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
+
+module.exports = withBundleAnalyzer(config)
