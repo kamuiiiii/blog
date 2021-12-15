@@ -17,7 +17,7 @@
   @apply mt-0 pl-0;
 }
 
-.notion-h2 {
+.notion-h1 {
   @apply text-2xl;
   @apply border-b border-gray-200 dark:border-gray-700;
   @apply w-full;
