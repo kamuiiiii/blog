@@ -18,10 +18,10 @@
 }
 
 .notion-h1 {
-  @apply text-3xl;
   @apply border-b border-gray-200 dark:border-gray-700;
   @apply w-full;
   @apply mb-3;
+  font-size: 28px;
 }
 
 .notion-list li {
