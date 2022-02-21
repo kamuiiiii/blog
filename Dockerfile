@@ -1,4 +1,4 @@
-ARG NOTION_PAGE_ID=adc3552cfc73442ab5048d4b1eb0079a
+ARG NOTION_PAGE_ID=3f29afa5639943c1ab1b4f37e3dc7917
 
 # Install dependencies only when needed
 FROM node:14-alpine AS deps
