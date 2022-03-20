@@ -2,7 +2,7 @@ const BLOG = {
   title: 'Kamui Blog',
   author: 'kamui',
   email: 'kamui.huang.js@gmail.com',
-  link: 'https://nobelium.vercel.app',
+  link: 'https://www.kamuiiiii.tech',
   description: '',
   lang: 'en-US', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
   appearance: 'light', // ['light', 'dark', 'auto'],
