@@ -1,4 +1,4 @@
-import BLOG from ''
+const BLOG = require("./blog.config");
 
 module.exports = {
   siteUrl: BLOG.link,
